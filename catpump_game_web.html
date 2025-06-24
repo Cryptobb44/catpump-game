@@ -105,13 +105,13 @@
 
     function moverRaton() {
       const x = Math.random() * (game.clientWidth - 60);
-    raton.style.left = `${x}px`;
+      const y = Math.random() * (game.clientHeight - 60);
+      raton.style.left = `${x}px`;
       raton.style.top = `${y}px`;
     }
 
     raton.addEventListener("click", () => {
-      score++;   const y = Math.random() * (game.clientHeight - 60);
-     
+      score++;
       localStorage.setItem("catpump_score", score);
       scoreText.textContent = `Puntuación: ${score}`;
       moverRaton();
